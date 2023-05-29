@@ -1,6 +1,6 @@
 [target.armv7-unknown-linux-gnueabihf]
-image = "ghcr.io/cross-rs/armv7-unknown-linux-gnueabihf:main"
 pre-build = [
     "dpkg --add-architecture $CROSS_DEB_ARCH",
-    "apt-get update && apt-get install --assume-yes sqlite3 libsqlite3-dev:$CROSS_DEB_ARCH"
+    "apt-get update && apt-get install --assume-yes sqlite3 libsqlite3-dev:$CROSS_DEB_ARCH",
+    "apt-get install --assume-yes libclang-4.0-dev clang-4.0"
 ]
