@@ -5,3 +5,5 @@ pre-build = [
     "apt-get update && apt-get install --assume-yes sqlite3 libsqlite3-dev:$CROSS_DEB_ARCH",
     "apt-get install --assume-yes libclang-10-dev clang-10"
 ]
+[target.armv7-unknown-linux-gnueabihf.env]
+passthrough = ["CMAKE_TOOLCHAIN_FILE_armv7_unknown_linux_gnueabihf"]
